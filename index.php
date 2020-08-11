@@ -1,262 +1,279 @@
-<?php
+<?php 
 session_start();
-include_once 'admin/api/koneksi.php';
-?>
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Expert System | Sistem Pakar</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" /> -->
 
-		<link rel="shortcut icon" href="admin/assets/media/logo/logo3.png" />
-		<link href="admin/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/pagePreloaders.css" rel="stylesheet" type="text/css" />
+if (!isset($_SESSION['username'])) {
 	
+	header('location:page/login');
+}
+
+
+
+?>
+<!DOCTYPE html>
+
+<!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 8
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<html lang="en">
+
+	<!-- begin::Head -->
+	<head>
+		<base href="">
+		<meta charset="utf-8" />
+		<title>Aplikasi Serah Terima</title>
+		<meta name="description" content="No aside layout examples">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!--begin::Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
+
+		<!--end::Fonts -->
+
+		<!--begin::Page Vendors Styles(used by this page) -->
+
+		<link href="assets/css/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendors Styles -->
+	    <link href="assets/css/pagePreloaders.css" rel="stylesheet" type="text/css" />
+
+		<!--begin::Global Theme Styles(used by all pages) -->
+		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
+		<!--end::Global Theme Styles -->
+
+		<!--begin::Layout Skins(used by all pages) -->
+		<link href="assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/skins/brand/light.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css" />
+
+		<!--end::Layout Skins -->
+		<link rel="shortcut icon" href="assets/media/logo/logo.png" />
+
 	</head>
-	<body class="is-preload">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Artikel</a></li>
-							<li><a href="#two">Tentang Aplikasi</a></li>
-							<li><a href="#three">Saran/Masukan</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+	<!-- end::Head -->
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- begin::Body -->
+	<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-page--loading">
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Expert System</h1>
-					
-								<?php
-										if (!empty($_SESSION['nama_lengkap'])) {
-											# code...
-											echo "<h3>Selamat Datang, ".$_SESSION['nama_lengkap']."</h3>";
+		<!-- begin:: Page -->
 
-										}
-									?>
-							
-							<p><strong><em>Expert System</em></strong> atau Sistem Pakar untuk Mengetahui  Karakteristik dan kepribadian pada Anak<br />
-							Silahkan <strong>LOGIN/REGISTER</strong> untuk melakukan konsultasi.</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-								<li><a href="admin" class="button primary">
-									<?php
-										if (empty($_SESSION['nama_lengkap'])) {
-											# code...
-											echo "LOGIN/REGISTER";
+		<!-- begin:: Header Mobile -->
+		<div id="kt_header_mobile" class="hilang kt-header-mobile  kt-header-mobile--fixed ">
+			<div class="kt-header-mobile__logo">
+				<a href="./">
+					<img alt="Logo" src="assets/media/logo/logo3.png" width="50" height="50" />
+				</a>
+			</div>
+			<div class="kt-header-mobile__toolbar">
+				<button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button>
+				<button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
+			</div>
+		</div>
 
-										}else{
-											echo "KONSULTASI";
-										}
-									?>
-								</a></li>
-							</ul>
-						</div>
-					</section>
+		<!-- end:: Header Mobile -->
+		<div class="kt-grid kt-grid--hor kt-grid--root">
+			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
+					<!-- begin:: Header -->
+					<div id="kt_header" class="hilang kt-header kt-grid__item  kt-header--fixed">
+						<?php include_once 'page/header.php'; ?>
+					</div>
 
+					<!-- end:: Header -->
+					<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
-						<?php
+						<!-- begin:: Subheader -->
+						<div class="hilang kt-subheader   kt-grid__item" id="kt_subheader">
+							<div class="kt-container  kt-container--fluid ">
+								<div class="kt-subheader__main">
+									<h3 class="kt-subheader__title">
+								     </h3>
+									
+								</div>
+								<div class="kt-subheader__toolbar">
+									<div class="kt-subheader__wrapper">
+										<button  class="btn kt-subheader__btn-daterange" data-toggle="kt-tooltip" title="Today" data-placement="left">
+											<span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Hari</span>&nbsp;
+											<span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">
+												<span id="waktu">
+													
+												</span>
+											</span>
 
-						$sqlArtikel="SELECT * FROM artikel ORDER BY id limit 5";
-						$hasilArtikel = $conn->query($sqlArtikel);
-
-						while ( $rArtikel = $hasilArtikel->fetch()) {
-							# code...
-						
-
-						?>
-
-						<section>
-							<a href="#" class="image"><img src="assets/images/anak.jpg" alt="" data-position="center center" /></a>
-							<div class="content" style="background-image: url('admin/assets/media/bg/bg-2.jpg');">
-								<div class="inner">
-									<h2><?php echo $rArtikel['judul'] ?></h2>
-									<p><?php echo $rArtikel['isi'] ?></p>
-									<ul class="actions">
-										<li><a class="button primary">Write by : <?php echo $rArtikel['upd'] ?></a></li>
-										<li><a class="button"><?php echo Indonesia2Tgl($rArtikel['tgl']) ?></a></li>
-										
-									</ul>
+											<!--<i class="flaticon2-calendar-1"></i>-->
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--sm">
+												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<rect x="0" y="0" width="24" height="24" />
+													<path d="M4.875,20.75 C4.63541667,20.75 4.39583333,20.6541667 4.20416667,20.4625 L2.2875,18.5458333 C1.90416667,18.1625 1.90416667,17.5875 2.2875,17.2041667 C2.67083333,16.8208333 3.29375,16.8208333 3.62916667,17.2041667 L4.875,18.45 L8.0375,15.2875 C8.42083333,14.9041667 8.99583333,14.9041667 9.37916667,15.2875 C9.7625,15.6708333 9.7625,16.2458333 9.37916667,16.6291667 L5.54583333,20.4625 C5.35416667,20.6541667 5.11458333,20.75 4.875,20.75 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+													<path d="M2,11.8650466 L2,6 C2,4.34314575 3.34314575,3 5,3 L19,3 C20.6568542,3 22,4.34314575 22,6 L22,15 C22,15.0032706 21.9999948,15.0065399 21.9999843,15.009808 L22.0249378,15 L22.0249378,19.5857864 C22.0249378,20.1380712 21.5772226,20.5857864 21.0249378,20.5857864 C20.7597213,20.5857864 20.5053674,20.4804296 20.317831,20.2928932 L18.0249378,18 L12.9835977,18 C12.7263047,14.0909841 9.47412135,11 5.5,11 C4.23590829,11 3.04485894,11.3127315 2,11.8650466 Z M6,7 C5.44771525,7 5,7.44771525 5,8 C5,8.55228475 5.44771525,9 6,9 L15,9 C15.5522847,9 16,8.55228475 16,8 C16,7.44771525 15.5522847,7 15,7 L6,7 Z" fill="#000000" />
+												</g>
+											</svg> </button>
+									
+									</div>
 								</div>
 							</div>
-						</section>
-
-
-						<?php
-							}
-						?>
-
-						
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up" style="background-image: url('admin/assets/media/bg/bg-7.jpg');">
-						<div class="inner">
-							<h2>Cara Melakukan Konsultasi</h2>
-							<p>Pastikan Anda memiliki akun terlebih dahulu agar bisa melakukan konsultasi di Aplikasi Pakar ini</p>
-							<div class="features">
-
-								<section>
-									<span class="icon solid major fa-sign-in-alt"></span>
-									<h3>DAFTAR / LOGIN</h3>
-									<p>Melakukan Pendaftaran Akun dan apabila sudah punya tinggal login, kemudian <strong>MENU KONSULTASI</strong></p>
-								</section>
-						
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>MENU KONSULTASI</h3>
-									<p>Setalah Berhasil Login, kemudian pilih menu Konsultasi pada menu yang tersedia, kemudian <strong>PILIH PASIEN/USER</strong></p>
-								</section>
-								<section>
-									<span class="icon solid major fa-users"></span>
-									<h3>PILIH PASIEN/USER</h3>
-									<p>Pastikan User/pasien yang dipilih adalah user login Anda, kemudian <strong>JAWAB PETANYAAN</strong></p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>JAWAB PETANYAAN</h3>
-									<p>Kemudian pada saat sesi pertanyaan harap jawab dengan sebenar-benarnya agar mendapatkan hasil yang sesuai, kemudian <strong>PILIH HASIL KONSULTASI</strong></p>
-								</section>
-								<section>
-									<span class="icon solid major fa-comments"></span>
-									<h3>HASIL KONSULTASI</h3>
-									<p>Jika Anda telah menjawab semua pertanyaan maka, akan muncul hasil konsultasi , kemudian <strong>PRINT</strong></p>
-								</section>
-								<section>
-									<span class="icon solid major fa-print"></span>
-									<h3>PRINT</h3>
-									<p>Hasil Konsultasi dapat diprint dan juga disimpan pada PDF.</p>
-								</section>
-							</div>
-							
 						</div>
-					</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up" style="background-image: url('admin/assets/media/bg/bg-2.jpg');">
-						<div class="inner">
-							<h2>KRITIK DAN SARAN</h2>
-							<p>Silahkan kirim kritik dan saran Anda untuk menjadikan aplikasi pakar ini bisa terus berkembang dan menjadi lebih baik lagi</p>
-							<div class="split style1">
-								<section>
-									<form id="formSaran">
-										<div class="fields">
-											<div class="field half">
-												<label for="nama">Name</label>
-												<input type="text" name="nama" id="nama" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="subjek">Subject</label>
-												<input type="text" name="subjek" id="subjek" />
-											</div>
-											<div class="field">
-												<label for="pesan">Message</label>
-												<textarea name="pesan" id="pesan" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>Bandung, Jawa Barat <br />
-											Indonesia</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">zzafachreza@gmail.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(+62) 8965-3763-986</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
+						<!-- end:: Subheader -->
+
+						<!-- begin:: Content -->
+						<div id="dataLoad" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+							<!--Begin::Dashboard 4-->
+
+
+							<!--End::Dashboard 4-->
 						</div>
-					</section>
 
-			</div>
+						<!-- end:: Content -->
+					</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; 2019. Fachreza Maulana.</li><li>Images: <a href="http://unsplash.com">Unsplash</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+					<!-- begin:: Footer -->
+					
+
+					<!-- end:: Footer -->
 				</div>
-			</footer>
+			</div>
+		</div>
 
-		<!-- Scripts -->
+
+
+		<!-- end::Quick Panel -->
+
+		<!-- begin::Scrolltop -->
+		<div id="kt_scrolltop" class="kt-scrolltop">
+			<i class="fa fa-arrow-up"></i>
+		</div>
+
+		<div class="modal fade show" id="UserGuide" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" style="display:none" aria-modal="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLongTitle">User Guide</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											</button>
+										</div>
+										<div class="modal-body">
+											<table class="table table-bordered table-striped">
+												<tr>
+													<td>New Record</td>
+													<td>Berfungsi untuk <span class="kt-font-brand">menambahkan</span> data</td>
+												</tr>
+												<tr>
+													<td>Delete</td>
+													<td>Berfungsi untuk <span class="kt-font-danger">menghapus</span> data dan bisa dipilih</td>
+												</tr>
+												<tr>
+													<td>View</td>
+													<td>Berfungsi untuk <span class="kt-font-success">melihat</span> atau <span class="kt-font-warning">edit</span> data</td>
+												</tr>
+												
+											</table>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						
+										</div>
+									</div>
+								</div>
+</div>
+
+
+		<!--ENd:: Chat-->
+
+		<!-- begin::Global Config(global config for global JS sciprts) -->
+		<script>
+			var KTAppOptions = {
+				"colors": {
+					"state": {
+						"brand": "#5d78ff",
+						"dark": "#282a3c",
+						"light": "#ffffff",
+						"primary": "#5867dd",
+						"success": "#34bfa3",
+						"info": "#36a3f7",
+						"warning": "#ffb822",
+						"danger": "#fd3995"
+					},
+					"base": {
+						"label": [
+							"#c5cbe3",
+							"#a1a8c3",
+							"#3d4465",
+							"#3e4466"
+						],
+						"shape": [
+							"#f0f3ff",
+							"#d9dffa",
+							"#afb4d4",
+							"#646c9a"
+						]
+					}
+				}
+			};
+		</script>
+
+		<!-- end::Global Config -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!--begin::Global Theme Bundle(used by all pages) -->
+		<script src="assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+		<script src="assets/js/scripts.bundle.js" type="text/javascript"></script>
+
+		<!--end::Global Theme Bundle -->
+
 		<!--begin::Page Vendors(used by this page) -->
-		<script src="//www.amcharts.com/lib/3/amcharts.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/serial.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/radar.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/pie.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/tools/polarScatter/polarScatter.min.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/animate/animate.min.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/export/export.min.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/themes/light.js" type="text/javascript"></script>
+		
 
 		<!--end::Page Vendors -->
+			<!--begin::Page Vendors(used by this page) -->
+		<script src="assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 
+		<!--end::Page Vendors -->
+		
 		<!--begin::Page Scripts(used by this page) -->
+		<script src="assets/js/pages/crud/datatables/basic/basic.js" type="text/javascript"></script>
+		<!--begin::Page Scripts(used by this page) -->
+		<script src="assets/js/pages/dashboard.js" type="text/javascript"></script>
+				<script src="assets/js/pagePreloaders.js" type="text/javascript"></script>
+				<script src="assets/js/pages/crud/forms/widgets/bootstrap-select.js" type="text/javascript"></script>
+				<script src="assets/js/pages/crud/file-upload/ktavatar.js" type="text/javascript"></script>
+				<script src="assets/js/pages/components/extended/bootstrap-notify.js" type="text/javascript"></script>
+				<script src="assets/js/full.js" type="text/javascript"></script>
+				
+				<script src="assets/js/masterUser.js" type="text/javascript"></script>
+				<script src="assets/js/masterPengetahuan.js" type="text/javascript"></script>
+				<script src="assets/js/konsultasi.js" type="text/javascript"></script>
+				<script src="assets/js/masterGangguan.js" type="text/javascript"></script>
+				<script src="assets/js/masterSolusi.js" type="text/javascript"></script>
+				<script src="assets/js/artikel.js" type="text/javascript"></script>
+				<script src="assets/js/hasil.js" type="text/javascript"></script>
+				<script src="assets/js/saran.js" type="text/javascript"></script>
+				<script src="assets/js/retur.js" type="text/javascript"></script>
 
-
-			<script src="admin/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+				<script src="assets/js/highcharts.js"></script>
+				<script src="assets/js/exporting.js"></script>
+				
 			
-			<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/app.js" type="text/javascript"></script>
+				
+				
+	
 
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/pagePreloaders.js"></script>
-
-			<script src="assets/js/main.js"></script>
-			
-			
-
+		<!--end::Page Scripts -->
 	</body>
+
+	<!-- end::Body -->
 </html>
 
