@@ -15,10 +15,7 @@
 							<div class="kt-portlet kt-portlet--mobile">
 
 							
-	<?php
-	 session_start();
-		if($_SESSION['level']!=='Supplier'){
-			?>
+
 
 
 								<div class="kt-portlet__head kt-portlet__head--lg">
@@ -41,15 +38,27 @@
 
 											<div class="kt-portlet__head-actions">
 
+													<?php
+													session_start();
+												if($_SESSION['level']==='Admin'){
+													?>
+
 													<button type="button" id="btnPilihAll"  class="btn btn-danger btn-icon-sm" >
 
-														<i class="la la-trash"></i> Delete
+														<i class="la la-trash"></i> Delete <?php echo $_SESSION['level'] ?>
 
 													</button>
 
+													
+												<?php } ?>
 
 												&nbsp;
 
+
+													<?php
+													
+												if($_SESSION['level']!=='Supplier'){
+													?>
 												<button onclick="AddRetur()"  class="btn btn-brand btn-elevate btn-icon-sm">
 
 													<i class="la la-plus"></i>
@@ -57,6 +66,7 @@
 													New Record
 
 												</button>
+												<?php } ?>
 
 											</div>
 
@@ -65,7 +75,7 @@
 									</div>
 
 								</div>
-		<?php } ?>
+
 								<div class="kt-portlet__body">
 
 
