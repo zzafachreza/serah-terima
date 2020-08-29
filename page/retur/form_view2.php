@@ -229,3 +229,8 @@ $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
 					</div>
 
 					
+					<script type="text/javascript">
+						function printHasil(){
+							window.print();
+						}
+					</script>
