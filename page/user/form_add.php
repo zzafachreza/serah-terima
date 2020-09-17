@@ -7,17 +7,17 @@
 													<div class="col col-sm-5">
 														<div class="form-group">
 															<label>Username:</label>
-															<input name="username" type="text" class="form-control" placeholder="Enter username">
+															<input name="username" type="text" required="required" class="form-control" placeholder="Enter username">
 															<span class="form-text text-muted">Please enter your username</span>
 														</div>
 														<div class="form-group">
 															<label>Nama Lengkap / Nama Supplier :</label>
-															<input name="nama_lengkap" type="text" class="form-control" placeholder="Nama Lengkap / Nama Supplier ">
+															<input name="nama_lengkap" required="required" type="text" class="form-control" placeholder="Nama Lengkap / Nama Supplier ">
 															<span class="form-text text-muted">Silahkan masukan Nama Lengkap / Nama Supplier </span>
 														</div>
 														<div class="form-group">
 															<label>Password:</label>
-															<input name="password" type="password" class="form-control" placeholder="Enter password">
+															<input name="password" required="required" type="password" class="form-control" placeholder="Enter password">
 															<span class="form-text text-muted">Silahkan masukan password</span>
 														</div>
 														<div class="form-group">
@@ -32,7 +32,7 @@
 													<div class="col col-sm-5">
 														<div class="form-group">
 															<label>Tanggal Lahir:</label>
-															<input autocomplete="off" name="tanggal_lahir" type="text" class="tanggal form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+															<input autocomplete="off" required="required" name="tanggal_lahir" type="text" class="tanggal form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 															<span class="form-text text-muted">Silahkan masukan tanggal Lahir</span>
 														</div>
 
@@ -48,7 +48,7 @@
 
 														<div class="form-group">
 															<label>Email:</label>
-															<input type="email" name="email" class="form-control" placeholder="Enter email">
+															<input required="required" type="email" name="email" class="form-control" placeholder="Enter email">
 															<span class="form-text text-muted">Silahkan masukan e-mail</span>
 														</div>
 														<div class="form-group">
@@ -58,7 +58,7 @@
 														</div>
 														<div class="form-group">
 															<label>Alamat:</label>
-															<textarea name="alamat" class="form-control" placeholder="Enter alamat" id="kt_autosize_1" rows="3" style="overflow: auto; overflow-wrap: break-word; resize: none; height: 80px;"></textarea>
+															<textarea required="required" name="alamat" class="form-control" placeholder="Enter alamat" id="kt_autosize_1" rows="3" style="overflow: auto; overflow-wrap: break-word; resize: none; height: 80px;"></textarea>
 															<span class="form-text text-muted">Silahkan masukan alamat</span>
 														</div>
 														<div class="form-group">

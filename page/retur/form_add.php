@@ -25,7 +25,7 @@ $hasil = $conn->query($sql);
 
 															<label>nomor retur :</label>
 
-															<input name="no_retur" type="text" class="form-control" placeholder="Enter nomor retur">
+															<input name="no_retur" type="text" required="require" class="form-control" placeholder="Enter nomor retur">
 
 															<span class="form-text text-muted">masukan nomor retur</span>
 
@@ -54,7 +54,7 @@ $hasil = $conn->query($sql);
 
 															<label>nama barang :</label>
 
-															<input name="nama_barang" type="text" class="form-control" placeholder="masukan nama barang">
+															<input name="nama_barang" type="text" required="required" class="form-control" placeholder="masukan nama barang">
 
 															<span class="form-text text-muted">masukannama barang</span>
 
@@ -63,7 +63,7 @@ $hasil = $conn->query($sql);
 
 															<label>Jumlah :</label>
 
-															<input name="qty" type="text" class="form-control" placeholder="masukan Jumlah">
+															<input name="qty" type="text" required="required" class="form-control" placeholder="masukan Jumlah">
 
 															<span class="form-text text-muted">masukan Jumlah</span>
 
@@ -73,7 +73,7 @@ $hasil = $conn->query($sql);
 
 															<label>Potongan :</label>
 
-															<input name="total" type="text" class="form-control" placeholder="masukan Potongan">
+															<input name="total" type="text" required="required" class="form-control" placeholder="masukan Potongan">
 
 															<span class="form-text text-muted">masukan Potongan</span>
 
@@ -83,7 +83,7 @@ $hasil = $conn->query($sql);
 
 															<label>Keterangan / Orang yang Ambil :</label>
 
-															<input name="pengambilan_barang" type="text" class="form-control" placeholder="Enter masukan Keterangan">
+															<input name="pengambilan_barang"  required="required" type="text" class="form-control" placeholder="Enter masukan Keterangan">
 
 															<span class="form-text text-muted">masukan Keterangan / Orang yang Ambil</span>
 
