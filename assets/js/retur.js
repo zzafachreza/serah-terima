@@ -94,7 +94,7 @@ function MenuRetur(){
 					               
 					                { "render": function ( data, type, row ) { // Tampilkan kolom aksi
 					                    var html  ='<div class="btn-group btn-group" role="group">'
-											html +='<button type="button" onclick="ViewRetur(\'' + row[0] + '\')" class="btn btn-primary btnView" data-id="' + row[0] + '"><i class="fa fa-file-medical-alt"></i> View Detail</button>'
+											html +='<button type="button" onclick="ViewRetur(\'' + row[0] + '\')" class="btn btn-primary btnView" data-id="' + row[0] + '"><i class="fa fa-file-medical-alt"></i> Lihat</button>'
 											html +='</div>'
 						                    return html
 						                }

@@ -28,7 +28,7 @@
 
 										</span>
 
-										<button onclick="UserGuide()" class="btn btn-info"><i class="flaticon-questions-circular-button"></i> User Guide</button>
+									
 
 									</div>
 
@@ -63,7 +63,7 @@
 
 													<i class="la la-plus"></i>
 
-													New Record
+													Tambah
 
 												</button>
 												<?php } ?>

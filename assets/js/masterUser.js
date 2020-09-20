@@ -71,7 +71,7 @@ function MenuUser(){
 					               
 					                { "render": function ( data, type, row ) { // Tampilkan kolom aksi
 					                    var html  ='<div class="btn-group btn-group" role="group">'
-											html +='<button type="button" onclick="ViewUser(' + row[0] + ')" class="btn btn-primary btnView" data-id="' + row[0] + '"><i class="fa fa-eye"></i> View</button>'
+											html +='<button type="button" onclick="ViewUser(' + row[0] + ')" class="btn btn-primary btnView" data-id="' + row[0] + '"><i class="fa fa-eye"></i> Lihat</button>'
 											html +='</div>'
 						                    return html
 						                }

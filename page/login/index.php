@@ -93,19 +93,19 @@ License: You must have a valid license purchased only from themeforest(the above
 
 										<input class="form-control" type="text" placeholder="Username" id="username" name="username" aria-invalid="true" autocomplete="off">
 
-										<div style="display: none" id="username-error" class="error invalid-feedback">This field is required.</div>
+										<div style="display: none" id="username-error" class="error invalid-feedback">Form ini wajub diisi</div>
 
 									</div>
 									<div class="form-group">
 										<input class="form-control" type="password" placeholder="Password" id="password" name="password" autocomplete="off" >
 
-										<div style="display: none" id="password-error" class="error invalid-feedback">This field is required.</div>
+										<div style="display: none" id="password-error" class="error invalid-feedback">Form ini wajub diisi</div>
 									</div>
 
 
 									
 									<div class="kt-login__actions">
-										<button id="kt_login_signin_submit" class="requestfullscreen btn btn-pill kt-login__btn-primary">Sign In</button>&nbsp;&nbsp;
+										<button id="kt_login_signin_submit" class="requestfullscreen btn btn-pill kt-login__btn-primary">Masuk</button>&nbsp;&nbsp;
 										<button type="reset" class="btn btn-pill kt-login__btn-secondary">Reset</button>
 									</div>
 								</form>

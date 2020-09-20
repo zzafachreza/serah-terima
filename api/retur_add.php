@@ -10,7 +10,7 @@ date_default_timezone_set("Asia/Jakarta");
 
 
 
-
+// cek
 
 
 // $id= $_POST['id'];
@@ -24,35 +24,53 @@ $pengambilan_barang= $_POST['pengambilan_barang'];
 $no_retur= $_POST['no_retur'];
 
 
-$sql="INSERT INTO `retur`
+// cek double 
+
+$sqlcek = "SELECT no_retur FROM retur WHERE no_retur='$no_retur'";
+
+
+$jml = $conn->query($sqlcek)->rowCount();
+
+if($jml > 0 ){
+
+    echo 402;
+
+}else{
+
+    $sql="INSERT INTO `retur`
             (`no_retur`,
              `tgl`,
              `nama_supplier`,
              `nama_barang`,
-             `qty`,
-             `total`,
-             `pengambilan_barang`)
-VALUES ('$no_retur',
-        NOW(),
-        '$nama_supplier',
-        '$nama_barang',
-        '$qty',
-        '$total',
-        '$pengambilan_barang');";
+                 `qty`,
+                 `total`,
+                 `pengambilan_barang`)
+    VALUES ('$no_retur',
+            NOW(),
+            '$nama_supplier',
+            '$nama_barang',
+            '$qty',
+            '$total',
+            '$pengambilan_barang');";
 
 
 
-if ($conn->query($sql)) {
+    if ($conn->query($sql)) {
 
-  
+      
 
-  echo 200;
+      echo 200;
 
-}else{
+    }else{
 
-  echo 404;
+      echo 404;
+
+    }
+
 
 }
+
+
 
 
 

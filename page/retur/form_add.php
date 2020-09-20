@@ -150,12 +150,20 @@ $hasil = $conn->query($sql);
 											type:'POST',
 											data:data,
 											success:function(data){
+												console.log(data);
 												if (data==200) {
 
 													MenuRetur();
 													Not("data berhasil ditambah","success","check-circle");
 												
-												}else{
+												}
+												if (data==402) {
+
+													MenuRetur();
+													Not("Nomor Retur sudah ada !","danger","times");
+												
+												}
+												else{
 													alert(data);
 												}
 											}

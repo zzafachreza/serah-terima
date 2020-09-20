@@ -225,9 +225,9 @@
 		
 											
 											<div class="kt-notification__custom kt-space-between">
-												<a href="api/logout.php" target="_self" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
+												<a href="api/logout.php" target="_self" class="btn btn-label btn-label-brand btn-sm btn-bold">keluar</a>
 												<a onclick="SettingUser(<?php echo $_SESSION['id']; ?>)" class="btn btn-default btn-sm btn-bold">
-													<i class="fa fa-cogs"></i> Setting</a>
+													<i class="fa fa-cogs"></i> pengaturan</a>
 											</div>
 										</div>
 

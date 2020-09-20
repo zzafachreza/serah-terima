@@ -11,8 +11,7 @@
 										<span class="kt-portlet__head-icon">
 											<i class="kt-font-brand flaticon2-line-char"></i>
 										</span>
-									<button onclick="UserGuide()" class="btn btn-info"><i class="flaticon-questions-circular-button"></i> User Guide</button>
-
+								
 							
 
 
@@ -21,13 +20,13 @@
 										<div class="kt-portlet__head-wrapper">
 											<div class="kt-portlet__head-actions">
 													<button type="button" id="btnUserPilih"  class="btn btn-danger btn-icon-sm" >
-														<i class="la la-trash"></i> Delete
+														<i class="la la-trash"></i> Hapus
 													</button>
 											
 												&nbsp;
 												<button onclick="AddUser()" class="btn btn-brand btn-elevate btn-icon-sm">
 													<i class="la la-plus"></i>
-													New Record
+													Tambah
 												</button>
 											</div>
 										</div>

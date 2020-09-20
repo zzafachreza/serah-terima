@@ -44,37 +44,37 @@
 	
     var dataLoad = $("#dataLoad"); 
 
-    	document.onkeydown = function(e) {
-	  if(event.keyCode == 123) {
-	     return false;
-	  }
-	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-	     return false;
-	  }
-	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-	     return false;
-	  }
-	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-	     return false;
-	  }
-	  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-	     return false;
-	  }
-	}
+//     	document.onkeydown = function(e) {
+// 	  if(event.keyCode == 123) {
+// 	     return false;
+// 	  }
+// 	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+// 	     return false;
+// 	  }
+// 	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+// 	     return false;
+// 	  }
+// 	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+// 	     return false;
+// 	  }
+// 	  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+// 	     return false;
+// 	  }
+// 	}
 
 
-$("body").on("contextmenu",function(){
+// $("body").on("contextmenu",function(){
 
 
-Not("Terimakasih untuk tidak click kanan","brand","terminal");
-       return false;
-    }); 
+// Not("Terimakasih untuk tidak click kanan","brand","terminal");
+//        return false;
+//     }); 
 
-$('body').on("cut copy",function() {
-    Not("Terimakasih untuk tidak dicopy","warning","stack-overflow");
-       return false;
+// $('body').on("cut copy",function() {
+//     Not("Terimakasih untuk tidak dicopy","warning","stack-overflow");
+//        return false;
 
-   });
+//    });
 
 
     dataLoad.load('page/dashboard.php');
